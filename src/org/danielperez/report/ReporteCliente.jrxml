@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCliente" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="64305d3b-aeef-4b3a-a02e-6e27b857264f">
+	<property name="ireport.zoom" value="1.2100000000000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codCliente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[Select * from Clientes Cl inner join TipoCliente Tc on Cl.codigoTipoCliente = Tc.codigoTipoCliente
+	inner join Locales L on Cl.codigoLocal = L.codigoLocal inner join
+		CuentasPorCobrar CPC on Cl.codigoCliente = CPC.codigoCliente
+			where Cl.codigoCliente = $P{codCliente}]]>
+	</queryString>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoLocal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoFavor" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoContra" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mesesPendientes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="disponibilidad" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorLocal" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorAdministracion" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCuentasPorCobrar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroFactura" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="anio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="valorNetoPago" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estadoPago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="802" height="555" uuid="a9cc3cdb-1c8e-4015-a5af-e5481527d596"/>
+				<imageExpression><![CDATA["C:\\Users\\Alexander Ramos\\Documents\\NetBeansProjects\\KinalMall2017145\\src\\org\\danielperez\\images\\Diseño Reporte Horizontal.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="109" splitType="Stretch">
+			<staticText>
+				<reportElement x="152" y="16" width="519" height="69" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="667df6c7-eddb-4e16-8450-98669f436000"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="48"/>
+				</textElement>
+				<text><![CDATA[ CLIENTES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="450" y="77" width="36" height="22" uuid="fa0da450-b00b-4420-b79e-1c7a92ef1cd0"/>
+				<imageExpression><![CDATA["C:\\Users\\Alexander Ramos\\Documents\\NetBeansProjects\\KinalMall2017145\\src\\org\\danielperez\\images\\KinalMallIcon.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="360" y="77" width="100" height="20" forecolor="#FFFFFF" uuid="f6979012-ea02-4cf3-b8d8-2673a75821d2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas" size="14"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+			<image>
+				<reportElement x="11" y="13" width="162" height="84" uuid="c3d5de76-343f-47e5-ad79-e293f2fdc6ec"/>
+				<imageExpression><![CDATA["C:\\Users\\Alexander Ramos\\Documents\\NetBeansProjects\\KinalMall2017145\\src\\org\\danielperez\\images\\Clientes.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement x="36" y="13" width="100" height="20" forecolor="#000000" uuid="4b9120b7-8a9c-4b9e-99b3-0a170ff10ca0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<text><![CDATA[Código Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="36" y="52" width="100" height="20" uuid="90f4c479-ec53-4c77-ad0c-17db7459e14c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoCliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="293" y="13" width="128" height="20" forecolor="#000000" uuid="a36a6008-9876-43ad-9f38-f167c470ef1c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<text><![CDATA[Nombre del Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="293" y="52" width="128" height="20" uuid="215da2e9-4f00-4c19-8add-b8d945b8ddf5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombresCliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="457" y="13" width="136" height="20" forecolor="#000000" uuid="e2cc6f8b-90c9-43e8-9761-82126edbfad0"/>
+				<textElement>
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<text><![CDATA[Apellidos del Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="457" y="52" width="136" height="20" uuid="3b13adea-f6af-4441-8e4b-70bf0b0d8a97"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidosCliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="601" y="13" width="150" height="20" forecolor="#000000" uuid="2022726f-070b-43b7-b615-d64587447a3f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<text><![CDATA[Télefono del Cliente]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="601" y="52" width="150" height="20" uuid="1ca2b4fb-5983-40ee-ac86-15b0ce49a3d0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="167" y="52" width="100" height="20" uuid="91c4fb89-a5ee-4d28-87fa-39c790bba9f3"/>
+				<textElement>
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="167" y="13" width="100" height="20" uuid="28fe8616-f8a2-4dc7-9438-b2a26b947614"/>
+				<textElement>
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<text><![CDATA[Tipo de Cliente:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="78" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="14" width="802" height="49" forecolor="#AB4100" backcolor="#AB4100" uuid="650c49e8-1863-4651-a110-c43987a75131"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="29" width="58" height="20" forecolor="#FFFFFF" uuid="8b430b19-e0d2-422a-b7de-ba2d8218d599"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="12"/>
+				</textElement>
+				<text><![CDATA[Cod. Local]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="29" width="129" height="20" forecolor="#FFFFFF" uuid="9fe5804e-8d21-413c-b184-16214d54d290"/>
+				<textElement>
+					<font fontName="Impact" size="12"/>
+				</textElement>
+				<text><![CDATA[Disponibilidad del Local]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="29" width="100" height="20" forecolor="#FFFFFF" uuid="4652d5e3-c54f-4f79-b477-be8d9b9340b7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="12"/>
+				</textElement>
+				<text><![CDATA[Valor del Local]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="29" width="129" height="20" forecolor="#FFFFFF" uuid="07675dcb-2b1d-4b8b-b9e7-8e29176fc288"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="12"/>
+				</textElement>
+				<text><![CDATA[Cod. Cuentas Por Cobrar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="29" width="100" height="20" forecolor="#FFFFFF" uuid="d9a7ce75-7f31-4e75-907f-43c345bc130b"/>
+				<textElement>
+					<font fontName="Impact" size="12"/>
+				</textElement>
+				<text><![CDATA[Número de Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="571" y="29" width="110" height="20" forecolor="#FFFFFF" uuid="a08bf79e-5502-44e6-a7a3-5f0912c8e332"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="12"/>
+				</textElement>
+				<text><![CDATA[Valor Neto del Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="702" y="29" width="100" height="20" forecolor="#FFFFFF" uuid="52e2f457-cea5-410f-9bae-e59807e4c067"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="12"/>
+				</textElement>
+				<text><![CDATA[Estado del Pago]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="64" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="48" width="802" height="1" forecolor="#DD7522" uuid="2cd4882e-c8ef-468e-9f53-dbc9d11f95e0"/>
+				<graphicElement>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="16" width="58" height="20" uuid="1d241d4e-2662-4d76-a352-d17cbed1a224"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoLocal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="16" width="129" height="20" uuid="7229427a-b889-4dbc-b692-4be9bcf9494f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{disponibilidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="62" y="16" width="100" height="20" uuid="4d6ae4a4-fe75-44bd-adc8-611b1e3d6907"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{valorLocal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="321" y="16" width="129" height="20" uuid="2f2c7deb-0d6c-4e84-a8ae-a449ed813029"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoCuentasPorCobrar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="16" width="100" height="20" uuid="e5715167-e1c6-4100-b220-c62e787c2e6b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{numeroFactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="571" y="16" width="110" height="20" uuid="5a9ba7d7-50a2-4a6a-9b5b-5a56a5afaf1d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{valorNetoPago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="16" width="100" height="20" uuid="9aaa23c7-86b2-4ed5-8352-98ae4c54dd15"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{estadoPago}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="636" y="0" width="166" height="26" uuid="ad161b75-0ad5-4780-b17e-89441cb716f8"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daniel Alexander Pérez Ramos 2017145 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="752" y="26" width="50" height="20" uuid="b2fbfced-0ee7-4e17-a630-46b8b968fb54"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IN5AM]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

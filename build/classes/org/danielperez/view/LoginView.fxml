@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danielperez.controller.LoginController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: AB4100;">
+         <children>
+            <ImageView fitHeight="336.0" fitWidth="405.0" layoutX="-52.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Kinal%20Mall%20Logo%20.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: FFDCA0;">
+         <children>
+            <ImageView fitHeight="94.0" fitWidth="163.0" layoutX="76.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/LoginImage.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="84.0" layoutY="100.0" prefHeight="29.0" prefWidth="148.0" text="User Login" textAlignment="CENTER">
+               <font>
+                  <Font name="Britannic Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsuario" layoutX="54.0" layoutY="152.0" prefHeight="45.0" prefWidth="192.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: AB4100; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font></TextField>
+            <ImageView fitHeight="45.0" fitWidth="47.0" layoutX="7.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Users.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="13.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Password.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnLogin" layoutX="124.0" layoutY="312.0" mnemonicParsing="false" onAction="#Login" prefHeight="35.0" prefWidth="70.0" styleClass="button3" stylesheets="@../resource/ObjectKinalMall.css" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Consolas Bold" size="14.0" />
+               </font>
+            </Button>
+            <Hyperlink layoutX="27.0" layoutY="357.0" onMouseClicked="#ventanaUsuario" text="¿No tienes cuenta? Regístrate aquí...">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Hyperlink>
+            <PasswordField fx:id="txtPassword" layoutX="51.0" layoutY="215.0" prefHeight="41.0" prefWidth="198.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: AB4100; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font>
+            </PasswordField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

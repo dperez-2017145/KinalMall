@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danielperez.controller.UsuarioController">
+   <children>
+      <AnchorPane layoutX="209.0" prefHeight="400.0" prefWidth="548.0" style="-fx-background-color: FEAE59;">
+         <children>
+            <GridPane layoutX="78.0" layoutY="119.0" prefHeight="252.0" prefWidth="392.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.20001220703125" minWidth="10.0" prefWidth="159.59998779296876" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.4000244140625" minWidth="10.0" prefWidth="232.40001220703124" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="81.59998168945313" minHeight="10.0" prefHeight="47.6" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="99.20001831054688" minHeight="10.0" prefHeight="42.599999999999994" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="106.60001220703126" minHeight="10.0" prefHeight="52.20000610351563" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="129.79997863769532" minHeight="10.0" prefHeight="53.79999389648438" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="129.79997863769532" minHeight="10.0" prefHeight="42.399987792968744" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" text="Código del Usuario">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Nombre" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Apellido" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Usuario" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Contraseña" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoUsuario" alignment="CENTER" editable="false" prefHeight="34.0" prefWidth="98.0" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtNombreUsuario" editable="false" prefHeight="33.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtApellidoUsuario" editable="false" prefHeight="33.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtUsuario" editable="false" prefHeight="33.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtPassword" editable="false" prefHeight="33.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+            <Label alignment="CENTER_RIGHT" layoutX="181.0" layoutY="74.0" prefHeight="34.0" prefWidth="186.0" text="Ingresa tus datos" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="24.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="148.0" prefHeight="58.0" prefWidth="246.0" style="-fx-background-color: AB4100; -fx-background-radius: 15;">
+               <children>
+                  <Label alignment="CENTER" layoutX="72.0" layoutY="12.0" prefHeight="33.0" prefWidth="155.0" text="Kinal Mall" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="58.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/KinalMallIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="213.0" style="-fx-background-color: AB4100;">
+         <children>
+            <Pane layoutX="14.0" prefHeight="182.0" prefWidth="178.0" style="-fx-background-color: FFDCA0; -fx-background-radius: 0 0 20 20;">
+               <children>
+                  <Label alignment="CENTER" layoutX="12.0" layoutY="-2.0" prefHeight="33.0" prefWidth="155.0" text="Usuarios" textAlignment="CENTER">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="125.0" fitWidth="126.0" layoutX="27.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Usuarios.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="9.0" layoutY="215.0" prefHeight="111.0" prefWidth="194.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="186.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="38.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnCancelar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#cancelar" prefHeight="46.0" prefWidth="186.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Cancelar" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgCancelar" fitHeight="54.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Cancelar%20.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

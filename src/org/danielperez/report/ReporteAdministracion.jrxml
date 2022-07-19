@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cff9415b-50a6-48fc-907d-5aea9cbab063">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="572" height="752" uuid="97111cb2-e8e9-4acb-b24f-2944bd081f5e"/>
+				<imageExpression><![CDATA["C:\\Users\\Alexander Ramos\\Documents\\NetBeansProjects\\KinalMall2017145\\src\\org\\danielperez\\images\\Diseño Admin.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="103" splitType="Stretch">
+			<image>
+				<reportElement x="3" y="10" width="104" height="91" uuid="08ad449f-375e-4c6d-a680-c8eb37b3c438"/>
+				<imageExpression><![CDATA["C:\\Users\\Alexander Ramos\\Documents\\NetBeansProjects\\KinalMall2017145\\src\\org\\danielperez\\images\\Aministracion.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="47" y="20" width="525" height="81" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="24e0ba04-7a3b-481c-9b4c-077e1375acea"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="48"/>
+				</textElement>
+				<text><![CDATA[ ADMINISTRACIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="81" width="100" height="20" forecolor="#FFFFFF" uuid="10a35211-3844-4c50-820d-6bfcd521c811"/>
+				<textElement textAlignment="Center">
+					<font fontName="Consolas" size="14"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+			<image>
+				<reportElement x="340" y="78" width="39" height="23" uuid="91392375-53fc-4d32-bcb3-04179d7ac72a"/>
+				<imageExpression><![CDATA["C:\\Users\\Alexander Ramos\\Documents\\NetBeansProjects\\KinalMall2017145\\src\\org\\danielperez\\images\\KinalMallIcon.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="19" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<rectangle>
+				<reportElement x="3" y="0" width="559" height="27" forecolor="#AB4100" backcolor="#AB4100" uuid="19a3e5b7-8661-4eeb-b8cf-338d7bb1b416"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="14" y="7" width="133" height="20" forecolor="#FFFFFF" uuid="b8ef408e-c351-4fca-a8c9-be7cd826a835"/>
+				<textElement>
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<text><![CDATA[Código Administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="7" width="269" height="20" forecolor="#FFFFFF" uuid="70bc8cad-8b30-42fd-a7d1-c9549eac63c4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="7" width="100" height="20" forecolor="#FFFFFF" uuid="df3bdc40-d214-45c3-add8-4dbaf017cc8a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Impact" size="14"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="55" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="10" width="146" height="20" uuid="8f0bc6c3-c972-49d7-9861-97d0cef1c224"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="173" y="10" width="269" height="20" uuid="4b236ae8-cd4b-4fbd-854d-69ed1e850477"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="10" width="100" height="20" uuid="8262c9b3-0ad4-4d7f-949a-d6b310b86ba7"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="3" y="54" width="569" height="1" forecolor="#DD7522" uuid="31f3b4d8-f5e2-4b84-8699-25f21629ae08"/>
+				<graphicElement>
+					<pen lineWidth="1.25" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="416" y="0" width="156" height="26" uuid="04e8c73d-349f-4d6e-8ed2-da71fb575354"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daniel Alexander Pérez Ramos 2017145 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="512" y="26" width="50" height="20" uuid="f4d42ee6-f528-4f84-b91f-241c8d9b66ba"/>
+				<textElement textAlignment="Right">
+					<font fontName="Consolas" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IN5AM]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

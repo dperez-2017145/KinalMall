@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="882.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danielperez.controller.DepartamentoController">
+   <children>
+      <Pane layoutX="200.0" layoutY="63.0" prefHeight="367.0" prefWidth="682.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <TableView fx:id="tblDepartamento" layoutX="19.0" layoutY="74.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="284.0" prefWidth="644.0" stylesheets="@../resource/ObjectKinalMall.css">
+              <columns>
+                <TableColumn fx:id="colCodigoDepartamento" prefWidth="144.0" text="Código Departamento" />
+                <TableColumn fx:id="colNombreDepartamento" minWidth="0.0" prefWidth="499.1999816894531" text="Nombre del Departamento " />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="430.0" prefWidth="200.0" style="-fx-background-color: AB4100;">
+         <children>
+            <Pane layoutX="12.0" prefHeight="182.0" prefWidth="178.0" style="-fx-background-color: FFDCA0; -fx-background-radius: 0 0 20 20;">
+               <children>
+                  <Label layoutX="12.0" layoutY="-2.0" prefHeight="33.0" prefWidth="155.0" text="Departamentos">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="136.0" fitWidth="135.0" layoutX="22.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Departamento.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="3.0" layoutY="207.0" prefHeight="202.0" prefWidth="194.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="186.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="38.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="46.0" prefWidth="186.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="38.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="46.0" prefWidth="186.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Editar" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="38.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="50.0" prefWidth="190.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Reporte" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="46.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="200.0" prefHeight="126.0" prefWidth="682.0" style="-fx-background-color: FEAE59;">
+         <children>
+            <GridPane layoutX="19.0" layoutY="52.0" prefHeight="50.0" prefWidth="644.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.4000244140625" minWidth="10.0" prefWidth="164.79998779296875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="168.8" minWidth="10.0" prefWidth="89.5999755859375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.79995727539062" minWidth="10.0" prefWidth="204.5999877929688" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.20001220703125" minWidth="10.0" prefWidth="186.20001220703125" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Código Departamento">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoDepartamento" editable="false" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Nombre del Departamento" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtNombreDepartamento" editable="false" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+            <ImageView fx:id="imgHome" fitHeight="55.0" fitWidth="45.0" layoutX="630.0" layoutY="8.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Home.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

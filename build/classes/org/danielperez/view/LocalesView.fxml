@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="1205.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danielperez.controller.LocalController">
+   <children>
+      <Pane layoutX="200.0" layoutY="-2.0" prefHeight="430.0" prefWidth="1006.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <TableView fx:id="tblLocales" layoutX="24.0" layoutY="165.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="248.0" prefWidth="959.0" stylesheets="@../resource/ObjectKinalMall.css">
+              <columns>
+                <TableColumn fx:id="colCodigoLocal" prefWidth="127.19996643066406" text="Código del Local" />
+                <TableColumn fx:id="colSaldoFavor" prefWidth="104.79998779296875" text="Saldo a favor" />
+                  <TableColumn fx:id="colSaldoContra" prefWidth="125.5999755859375" text="Saldo en contra" />
+                  <TableColumn fx:id="colMesesPendientes" prefWidth="142.4000244140625" text="Meses pendientes " />
+                  <TableColumn fx:id="colDisponibilidad" prefWidth="119.20001220703125" text="Disponibilidad" />
+                  <TableColumn fx:id="colValorLocal" minWidth="0.0" prefWidth="132.79998779296875" text="Valor del Local" />
+                  <TableColumn fx:id="colValorAdministracion" prefWidth="209.60003662109375" text="Valor de la Administración" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <AnchorPane prefHeight="430.0" prefWidth="200.0" style="-fx-background-color: #AB4100;">
+         <children>
+            <Pane layoutX="11.0" prefHeight="182.0" prefWidth="178.0" style="-fx-background-color: FFDCA0; -fx-background-radius: 0 0 20 20;">
+               <children>
+                  <Label alignment="CENTER" layoutX="12.0" layoutY="-2.0" prefHeight="33.0" prefWidth="155.0" text="Locales">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="142.0" fitWidth="141.0" layoutX="19.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Locales.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutX="8.0" layoutY="206.0" prefHeight="200.0" prefWidth="178.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="186.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="38.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="186.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="38.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="186.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Editar" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="38.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="38.0" prefWidth="186.0" styleClass="button2" stylesheets="@../resource/ObjectKinalMall.css" text="Reporte" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="38.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="200.0" prefHeight="150.0" prefWidth="1006.0" style="-fx-background-color: FEAE59;">
+         <children>
+            <GridPane layoutX="75.0" layoutY="10.0" prefHeight="91.0" prefWidth="811.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.800048828125" minWidth="10.0" prefWidth="141.800048828125" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.199951171875" minWidth="10.0" prefWidth="89.799951171875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.79998779296875" minWidth="10.0" prefWidth="124.9999755859375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.39998779296877" minWidth="10.0" prefWidth="143.6000366210938" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.9999877929688" minWidth="10.0" prefWidth="147.39999999999998" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.4000122070313" minWidth="10.0" prefWidth="116.60007324218748" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="201.0000122070312" minWidth="10.0" prefWidth="74.19992675781248" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="57.599981689453124" minHeight="10.0" prefHeight="40.599981689453124" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="82.4" minHeight="10.0" prefHeight="50.20001831054689" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Código Local">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoLocal" editable="false" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Saldo a favor" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtSaldoFavor" editable="false" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Meses pendientes" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtMesesPendientes" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtDisponibilidad" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Label text="Disponibilidad" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Saldo en contra" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Valor del local" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Impact" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="7.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtSaldoContra" editable="false" prefHeight="34.0" prefWidth="105.0" GridPane.columnIndex="5">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtValorLocal" editable="false" prefHeight="34.0" prefWidth="119.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Impact" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+            <Label layoutX="308.0" layoutY="112.0" text="Valor de la Administración">
+               <font>
+                  <Font name="Impact" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtValorAdministracion" editable="false" layoutX="520.0" layoutY="106.0" prefHeight="33.0" prefWidth="141.0">
+               <font>
+                  <Font name="Impact" size="16.0" />
+               </font>
+            </TextField>
+            <ImageView fx:id="imgHome" fitHeight="55.0" fitWidth="45.0" layoutX="947.0" layoutY="12.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Home.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="945.0" layoutY="76.0" onMouseClicked="#ventanaCuentaPorCobrar" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/CuentasPorCobrar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
